@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CounterApp from './CounterApp'
 
     let Button = styled.button
     `
@@ -40,6 +41,7 @@ const Content = () =>{
             <h1>Main Content- {user}</h1>
             <Button onClick={printSome}>Click me!</Button>
             <NewButton onClick={(e)=>{printSome1(e)}}>Done</NewButton>    
+            <CounterApp />
         </main>
     )
 }
