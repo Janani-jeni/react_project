@@ -9,7 +9,7 @@ const Productdetails = ({deepName = "Samsung" ,deepPrice = 3000 ,deepDescription
    
     return(
       
-        <section>
+        <section> 
             <h3>{deepName}</h3>
             <p>{deepPrice}</p>
             <p>{deepDescription}</p>

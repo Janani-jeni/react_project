@@ -10,13 +10,10 @@ function App() {
 
   let [user , setuser] = useState ({uName:"Janani",age:24,email:"abc@gmail.com"})
 
-  let UserContext = createContext()
-
-  // console.log(UserContext);
-
+  // Removed local UserContext creation
 
   return (
-    <UserContext.Provider value={(user)}>
+    <UserContext.Provider value={{user}}>
     
       <div className="app">
         <Header />
