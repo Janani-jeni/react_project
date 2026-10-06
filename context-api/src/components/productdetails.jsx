@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { UserContext } from '../App'
 
 const Productdetails = ({deepName = "Samsung" ,deepPrice = 3000 ,deepDescription = "12GB RAM With 240GB"}) => {
 
-    // let {product} = props
-    // console.log(product);
-    // console.log(props);
-    
+   let {user} = useContext(UserContext)
+   console.log(user);
+   
     return(
       
         <section>
