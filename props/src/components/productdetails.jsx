@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Productdetails = ({deepName,deepPrice,deepDescription}) => {
+const Productdetails = ({deepName = "Samsung" ,deepPrice = 3000 ,deepDescription = "12GB RAM With 240GB"}) => {
 
     // let {product} = props
     // console.log(product);
@@ -19,6 +19,12 @@ const Productdetails = ({deepName,deepPrice,deepDescription}) => {
 }
 
 export default Productdetails;
+
+// Productdetails.defaultProps = {
+//     deepName : "Samsung",
+//     deepPrice : 3000,
+//     deepDescription : "12GB RAM With 240GB"
+// }
 
 Productdetails.propTypes = {
     deepName : PropTypes.string.isRequired,
