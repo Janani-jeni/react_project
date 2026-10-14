@@ -68,11 +68,11 @@ section{
 main ul {
   list-style : none;
 }
-main .item svg{
-  color: rgb(118,118,210);
+main .item #edit{
+  color: rgb(226, 212, 20);
   outline: none;
 }
-main .item svg:hover{
+main .item #delete{
   color: rgb(238, 21, 21);
-  
+  outline: none;
 }
