@@ -1,19 +1,35 @@
 import Home from "./components/Home";
-import TodoApp from "./components/TodoApp";
-import {BrowseRouter as Router,Routes,Route} from "react-router-dom"
+import Login from "./components/Login";
+import Products from "./components/Products";
+import Signup from "./components/signUp";
+import Todo from "./components/todo";
+import TodoApp from "./components/todo";
+import { BrowserRouter as Router, Routes, Route , Link } from "react-router-dom";
 
-function App (){
-  return(
+function App() {
+  let user = "janani"
+  return (
     <div className="app">
-      <TodoApp />
+      {/* <TodoApp /> */}
+    
       <Router>
+        <ol>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/Products">Products</Link></li>
+          <li><Link to={`/login/${user}`}>Login</Link></li>
+          <li><Link to="/signup">Signup</Link></li>
+          <li><Link to="/todo">Todo</Link></li>
+        </ol>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/login/:newUser" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/todo" element={<Todo />} />
         </Routes>
       </Router>
     </div>
-  )
+  );
 }
 
 export default App;

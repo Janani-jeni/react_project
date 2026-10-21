@@ -5,7 +5,7 @@ import { MdOutlineSaveAlt } from "react-icons/md";
 import { FaCirclePlus } from "react-icons/fa6";
 
 
-const TodoApp = () =>{
+const Todo = () =>{
 
     let [items,setItems] = useState([
         {id:1,label:"Html & Css",checked:true},
@@ -77,4 +77,4 @@ const TodoApp = () =>{
         </main>
     )
 }
-export default TodoApp;
+export default Todo;
