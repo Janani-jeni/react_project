@@ -1,7 +1,17 @@
+import React from 'react'
+import { Link, Outlet } from "react-router-dom";
+
 const Products = () =>{ 
     return( 
         <>
-            <h1>Products Page</h1>
+            <div>
+                <h1>Products Page</h1>
+                <Link to="list">List</Link>
+                <Link to="details">Details</Link>
+                <Outlet />
+
+            </div>
+            
         </>
 
     )

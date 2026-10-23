@@ -1,5 +1,7 @@
 import Home from "./components/Home";
 import Login from "./components/Login";
+import ProductDetails from "./components/ProductDetails";
+import ProductList from "./components/ProductList";
 import Products from "./components/Products";
 import Signup from "./components/signUp";
 import Todo from "./components/todo";
@@ -22,7 +24,11 @@ function App() {
         </ol>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Products" element={<Products />} />
+          <Route path="/Products" element={<Products />} >
+            <Route index element={<ProductList />}/>
+            <Route path="list" element={<ProductList />} />
+            <Route path="details" element={<ProductDetails />} />
+          </Route>
           <Route path="/login/:newUser" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/todo" element={<Todo />} />
