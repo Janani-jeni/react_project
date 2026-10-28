@@ -7,6 +7,7 @@ import Signup from "./components/signUp";
 import Todo from "./components/todo";
 import TodoApp from "./components/todo";
 import { BrowserRouter as Router, Routes, Route , Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   let user = "janani"
