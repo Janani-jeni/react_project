@@ -8,6 +8,7 @@ import Todo from "./components/todo";
 import TodoApp from "./components/todo";
 import { BrowserRouter as Router, Routes, Route , Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from "./components/Navbar";
 
 function App() {
   let user = "janani"
@@ -23,6 +24,7 @@ function App() {
           <li><Link to="/signup">Signup</Link></li>
           <li><Link to="/todo">Todo</Link></li>
         </ol>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Products" element={<Products />} >
