@@ -76,3 +76,15 @@ main .item #delete{
   color: rgb(238, 21, 21);
   outline: none;
 }
+/* Product Card Design */
+.products{
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.product{
+  flex-grow:1;
+}
