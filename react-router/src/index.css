@@ -78,6 +78,7 @@ main .item #delete{
 }
 /* Product Card Design */
 .products{
+  width: 95vw;
   display : flex;
   flex-wrap: wrap;
   justify-content: center;
