@@ -15,7 +15,9 @@ const ProductList = () => {
             if(response.ok){
                 return response.json();
             }
-            
+            else{
+                throw new Error ("Search Proper Data")
+            }
         })
         .then((data)=>{setProducts (data);})
         // Reject
