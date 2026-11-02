@@ -2,42 +2,45 @@ import React, { useEffect, useState }  from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {LifeLine} from 'react-loading-indicators'
+import useFetch from "./custom-hook/useFetch";
 
 const ProductList = () => {
 
-    let [products,setProducts] = useState ([])
-    let [error,setError] = useState("")
-    let [isLoading,setIsLoading] = useState(true)
+    // let [products,setProducts] = useState ([])
+    // let [error,setError] = useState("")
+    // let [isLoading,setIsLoading] = useState(true)
 
-    useEffect(()=>{
-        fetch("http://localhost:4000/products", {method:"GET"})
-        // Resolve
-        .then((response)=>{
-            if(response.ok){
-                return response.json();
-            }
-            else{
-                throw new Error ("Search Proper Data")
-            }
-        })
-        .then((data)=>{
-            setProducts (data);
-        })
-        // Reject
-        .catch((error)=>{
-            // Server run aagalana "Failed to fetch" varum. Athaiyum "Search Proper Data" nu display panrom:
-            if(error.message === "Failed to fetch"){
-                setError("Search Proper Data");
-            } else {
-                setError(error.message);
-            }
-        })
-        .finally(()=>{
-            setIsLoading(false)
-        })
-    },[])
+    // useEffect(()=>{
+    //     fetch("http://localhost:4000/products", {method:"GET"})
+    //     // Resolve
+    //     .then((response)=>{
+    //         if(response.ok){
+    //             return response.json();
+    //         }
+    //         else{
+    //             throw new Error ("Search Proper Data")
+    //         }
+    //     })
+    //     .then((data)=>{
+    //         setProducts (data);
+    //     })
+    //     // Reject
+    //     .catch((error)=>{
+    //         // Server run aagalana "Failed to fetch" varum. Athaiyum "Search Proper Data" nu display panrom:
+    //         if(error.message === "Failed to fetch"){
+    //             setError("Search Proper Data");
+    //         } else {
+    //             setError(error.message);
+    //         }
+    //     })
+    //     .finally(()=>{
+    //         setIsLoading(false)
+    //     })
+    // },[])
 
+    let {products,error,isLoading} =  useFetch()
 
+    
     if(isLoading){
         return(
             <div>
@@ -47,6 +50,7 @@ const ProductList = () => {
             </div>
         )
     }
+    
     else{
 
         return(
